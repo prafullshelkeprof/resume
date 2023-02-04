@@ -1,8 +1,9 @@
 import { Box, Divider, Typography } from '@mui/material';
 import { BasicList, OrganizationExp } from 'components';
 import { useMemo } from 'react';
-import { WORK_CONFIG } from './work-config';
+import { useWorkConfig } from './useWorkConfig';
 const WorkExp = () => {
+  const [WORK_CONFIG] = useWorkConfig();
   const expOptions = useMemo(() => WORK_CONFIG.map((current) => {
     return {
       label: current.organizationName,
@@ -13,7 +14,6 @@ const WorkExp = () => {
   return (
     <Box>
       <Typography variant='h5'>Work Experience</Typography>
-      <Divider></Divider>
       <BasicList listOptions={expOptions}></BasicList>
     </Box>
   )

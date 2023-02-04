@@ -7,11 +7,7 @@ import { ChevronLeft, Menu } from '@mui/icons-material';
 
 import {
   BasicDrawer,
-  Languages,
-  Hobbies,
   ProfileImage,
-  PersonalInfo,
-  Technologies,
   BasicAccordion,
   context,
 } from 'components';

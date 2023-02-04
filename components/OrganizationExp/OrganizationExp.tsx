@@ -8,7 +8,6 @@ const OrganizationExp = (props: IOrganizationExp) => {
   const { timeInOrganization, workSummary } = props;
   return (
     <>
-      <Divider />
       <Typography
         component='div'
         variant='body2'

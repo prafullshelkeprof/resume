@@ -16,25 +16,11 @@ import {
   context,
 } from 'components';
 import { v4 as uuidv4 } from 'uuid';
+import { useSidebarConfig } from './useSidebarConfig';
 const Sidebar = () => {
+  const [SIDEBAR_CONFIG] = useSidebarConfig();
   const { isSidebarOpen, setIsSidebarOpen, drawerWidth } = useContext(context);
-  const sidebar_config = [
-    {
-      label: 'Personal Info',
-      component: <PersonalInfo />,
-    },
-    {
-      label: 'Skills',
-      component: <Technologies />
-    },
-    {
-      label: 'Languages',
-      component: <Languages />
-    },
-    {
-      label: 'Hobbies',
-      component: <Hobbies />
-    }];
+
   const handleDrawerClose = () => {
     setIsSidebarOpen(false);
   }
@@ -59,7 +45,7 @@ const Sidebar = () => {
           </IconButton>
         </Box>
         <ProfileImage />
-        {sidebar_config.map((current) => {
+        {SIDEBAR_CONFIG.map((current) => {
           return <BasicAccordion
             key={uuidv4()}
             disableGutters

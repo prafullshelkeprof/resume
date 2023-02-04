@@ -1,7 +1,8 @@
 import { BasicList } from 'components';
-import { TECHNOLOGIES } from './tech-config';
+import { useTechData } from './useTechConfig';
 
 const Languages = () => {
+  const [TECHNOLOGIES] = useTechData();
   return (
     <>
       <BasicList listOptions={TECHNOLOGIES} />

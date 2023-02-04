@@ -1,8 +1,9 @@
-import { Divider, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
+import type { ReactNode } from 'react';
 
 interface IOrganizationExp {
-  timeInOrganization: string;
-  workSummary: string;
+  timeInOrganization: ReactNode;
+  workSummary: ReactNode;
 }
 const OrganizationExp = (props: IOrganizationExp) => {
   const { timeInOrganization, workSummary } = props;

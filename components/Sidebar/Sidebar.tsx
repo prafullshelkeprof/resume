@@ -26,7 +26,6 @@ const Sidebar = () => {
       <BasicDrawer
         open={isSidebarOpen}
         hideBackdrop
-        variant='persistent'
         sx={{
           width: drawerWidth,
           flexShrink: 0,

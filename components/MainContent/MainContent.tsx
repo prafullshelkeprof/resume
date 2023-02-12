@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Box, styled, useTheme } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 
 import {
   PersonalSummary,
@@ -27,7 +27,7 @@ const MainContent = () => {
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen,
           }),
-          marginLeft: `${drawerWidth}px`,
+          marginLeft: { sm: 0, md: `${drawerWidth}px` },
         }),
       }
     }>
